@@ -198,6 +198,34 @@
           }
         }
       }
+    },
+    "common-ui-buttons": {
+      "projectType": "library",
+      "root": "libs/common/ui-buttons",
+      "sourceRoot": "libs/common/ui-buttons/src",
+      "prefix": "acht",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/ui-buttons/tsconfig.lib.json",
+              "libs/common/ui-buttons/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/common/ui-buttons/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/common/ui-buttons/jest.config.js",
+            "tsConfig": "libs/common/ui-buttons/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/common/ui-buttons/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

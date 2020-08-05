@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@acht/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@acht/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@acht/common/ui-buttons": ["libs/common/ui-buttons/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
