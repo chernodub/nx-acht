@@ -1,15 +1,16 @@
 import { Controller, Get } from '@nestjs/common';
-
-import { Message } from '@acht/api-interfaces';
-
+import { Observable } from 'rxjs';
 import { AppService } from './app.service';
+import { Letter } from '@acht/api-interfaces';
+
+
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('hello')
-  getData(): Message {
+  @Get('letters')
+  getData(): Observable<Letter[]> {
     return this.appService.getData();
   }
 }

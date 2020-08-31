@@ -33,10 +33,13 @@
       "tags": []
     },
     "api-interfaces": {
-      "tags": []
+      "tags": ["scope:shared", "type:data-access"]
     },
     "common-ui-buttons": {
       "tags": ["scope:shared", "type:ui"]
+    },
+    "api-firestore-interfaces": {
+      "tags": ["scope:shared", "type:data-access"]
     }
   }
 }

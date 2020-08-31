@@ -228,6 +228,37 @@
         }
       },
       "schematics": {}
+    },
+    "api-firestore-interfaces": {
+      "projectType": "library",
+      "root": "libs/api-firestore-interfaces",
+      "sourceRoot": "libs/api-firestore-interfaces/src",
+      "prefix": "acht",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api-firestore-interfaces/tsconfig.lib.json",
+              "libs/api-firestore-interfaces/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-firestore-interfaces/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api-firestore-interfaces/jest.config.js",
+            "tsConfig": "libs/api-firestore-interfaces/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/api-firestore-interfaces/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
