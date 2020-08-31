@@ -1,0 +1,12 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "prepare",
+      "type": "shell",
+      "command": "export GOOGLE_APPLICATION_CREDENTIALS='/c/Users/chern/Documents/edu/nx/acht/stoic-a96055926506.json'"
+    }
+  ]
+}
