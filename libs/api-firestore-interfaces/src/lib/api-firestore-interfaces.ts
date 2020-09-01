@@ -20,6 +20,8 @@ export namespace FirestoreEntity {
   export interface Letter {
     /** Letter text. */
     text: string;
+    /** Letter name. */
+    name: string;
     /** Qutote reference. */
     quote: DocumentReference<Quote>;
   }
