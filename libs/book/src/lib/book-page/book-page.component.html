@@ -1,0 +1,15 @@
+<h1>The Daily Stoic</h1>
+<article *ngFor="let article of articles$ | async">
+  <h2>{{ article.name }}</h2>
+  <blockquote>
+    <p>
+      {{ article.quote.text }}
+    </p>
+    <footer>
+      — {{ article.quote.work.author.name }}
+      <cite>{{ article.quote.work.name }}</cite>
+    </footer>
+  </blockquote>
+
+  <p>{{ article.content }}</p>
+</article>

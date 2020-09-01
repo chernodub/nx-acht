@@ -1,11 +1,19 @@
-<div style="text-align: center;">
-  <h1>Welcome to acht!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-  />
-</div>
-<pre>Message: {{ letters$ | async | json }}</pre>
-<acht-primary-button>
-  test button
-</acht-primary-button>
+<header>
+  <acht-primary-button>
+    test button
+  </acht-primary-button>
+
+  <acht-primary-button>
+    test button
+  </acht-primary-button>
+
+  <acht-primary-button>
+    test button
+  </acht-primary-button>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<aside></aside>
+<footer></footer>

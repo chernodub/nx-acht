@@ -40,6 +40,9 @@
     },
     "api-firestore-interfaces": {
       "tags": ["scope:shared", "type:data-access"]
+    },
+    "book": {
+      "tags": ["type:feature"]
     }
   }
 }

@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { forkJoin, from, Observable, of, combineLatest } from "rxjs";
 import { switchMap, map, tap } from "rxjs/operators";
 import { FirestoreEntity, MappedData } from '@acht/api-firestore-interfaces';
-import { Letter } from "@acht/api-interfaces";
+import { Article } from "@acht/api-interfaces";
 
 /**
  * Map firestore document reference to an observable with data.
@@ -49,13 +49,13 @@ export class AppService {
   });
 
   /** Get data. */
-  public getData(): Observable<Letter[]> {
+  public getData(): Observable<Article[]> {
     return of(null).pipe(
-      switchMap(() => this.firestore.collection('/letters').listDocuments()),
+      switchMap(() => this.firestore.collection('/articles').listDocuments()),
       switchMap(refs => 
         forkJoin(
           refs.map(ref => 
-            mapFirestoreDoc<FirestoreEntity.Letter>(ref as DocumentReference<FirestoreEntity.Letter>)))),
+            mapFirestoreDoc<FirestoreEntity.Article>(ref as DocumentReference<FirestoreEntity.Article>)))),
     );
   }
 }

@@ -1,6 +1,5 @@
 import { DocumentReference } from "@google-cloud/firestore";
 
-
 /** Result without the document refs. */
 export type MappedData<T> = WithId<{
   readonly [K in keyof T]: 
@@ -16,11 +15,11 @@ export type WithId<D> = D & {
 
 /** Namespace to store all the firestore entities. */
 export namespace FirestoreEntity {
-  /** Letter reference. */
-  export interface Letter {
-    /** Letter text. */
-    text: string;
-    /** Letter name. */
+  /** Article reference. */
+  export interface Article {
+    /** Article HTML content. */
+    content: string;
+    /** Article name. */
     name: string;
     /** Qutote reference. */
     quote: DocumentReference<Quote>;

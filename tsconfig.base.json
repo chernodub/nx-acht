@@ -20,7 +20,8 @@
       "@acht/common/ui-buttons": ["libs/common/ui-buttons/src/index.ts"],
       "@acht/api-firestore-interfaces": [
         "libs/api-firestore-interfaces/src/index.ts"
-      ]
+      ],
+      "@acht/book": ["libs/book/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

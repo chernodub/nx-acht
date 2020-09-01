@@ -1,7 +1,7 @@
 import {FirestoreEntity, MappedData} from '@acht/api-firestore-interfaces';
 
-/** Letter. */
-export type Letter = MappedData<FirestoreEntity.Letter>;
+/** Article. */
+export type Article = MappedData<FirestoreEntity.Article>;
 
 /** Quote. */
 export type Quote = MappedData<FirestoreEntity.Quote>;
