@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch via NPM",
+      "name": "Serve API",
       "request": "launch",
       "runtimeArgs": ["run-script", "nx", "serve", "api"],
       "runtimeExecutable": "npm",
@@ -14,6 +14,14 @@
       "env": {
         "GOOGLE_APPLICATION_CREDENTIALS": "stoic-a96055926506.json"
       }
+    },
+    {
+      "name": "Serve Client",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "nx", "serve"],
+      "runtimeExecutable": "npm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
     }
   ]
 }
